@@ -65,33 +65,3 @@ table td {
 tbody tr:nth-of-type(odd) {
     background-color: rgb(179, 208, 255, 0.3)
 }
-
-.buyoperation {
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    background-color: green;
-    border-radius: 0.5rem;
-}
-
-.selloperation {
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    background-color: red;
-    border-radius: 0.5rem;
-}
-
-.smallmargin {
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-}
-
-.operations {
-    display: flex;
-    justify-content: space-between;
-}
