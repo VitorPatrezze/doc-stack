@@ -39,10 +39,10 @@
         <main class="container-fluid py-5 text-center">
             USER HOMEPAGE
             <a href="https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/test" class="nav-item">TESTE API</a>
-            <form action="https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/test" method="post">
+            <form id="mainform" action="https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/test" method="post">
                 <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="v1" placeholder="Value 1" type="text">
                 <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="v2" placeholder="Value 2" type="text">
-                <button id="request" class="btn btn-primary" type="button">SEND</button>
+                <button id="request" class="btn btn-primary" type="button" onclick="handleRequestClick(document.getElementById('mainform'))">SEND</button>
             </form>
         </main>
 
