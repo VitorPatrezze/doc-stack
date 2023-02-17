@@ -46,6 +46,7 @@ var authToken;
     });
 
     function handleRequestClick(event) {
+        alert(event)
         event.preventDefault();
         makeRequest(event);
     }
