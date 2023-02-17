@@ -42,14 +42,20 @@
             <form action="https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/test" method="post">
                 <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="v1" placeholder="Value 1" type="text">
                 <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="v2" placeholder="Value 2" type="text">
-                <button class="btn btn-primary" type="submit">SEND</button>
+                <button id="request" class="btn btn-primary" type="button">SEND</button>
             </form>
         </main>
 
         <footer class="mb-5 small text-center text-muted">
            
         </footer>
-
+        <script src="js/vendor/jquery-3.1.0.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+        <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+        <script src="https://js.arcgis.com/4.3/"></script>
+        <script src="js/request.js"></script>
     </body>
+
 
 </html>
