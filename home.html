@@ -38,7 +38,12 @@
 
         <main class="container-fluid py-5 text-center">
             USER HOMEPAGE
-            <a href="https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev" class="nav-item">TESTE API</a>
+            <a href="https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/test" class="nav-item">TESTE API</a>
+            <form action="https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/test" method="post">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="v1" placeholder="Value 1" type="text">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="v2" placeholder="Value 2" type="text">
+                <button class="btn btn-primary" type="submit">SEND</button>
+            </form>
         </main>
 
         <footer class="mb-5 small text-center text-muted">
