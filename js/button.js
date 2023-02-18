@@ -1,11 +1,3 @@
-
-// import { Auth } from 'aws-amplify';
-
-// Auth.currentSession()
-//   .then((data) => console.log(data))
-//   .catch((err) => console.log(err));
-
-
 function handleRequestClick(form) {
     var dict = {}
     for (let i = 0; i < form.length; i++)
@@ -19,13 +11,15 @@ function handleRequestClick(form) {
 async function postData(form) {
   const apiName = 'MyApiName';
   const path = '/path';
+  const idToken = sessionStorage.getItem("id_token");
+  const accessToken = sessionStorage.getItem("access_token");
   const myInit = {
     headers: {
-      Authorization: `Bearer ${(await Auth.currentSession())
-        .getIdToken()
-        .getJwtToken()}`
-    }
+      Authorization: `Auth ${accessToken}`
+    },
+    body: form
   };
 
-  return await API.post(apiName, path, myInit);
+  console.log(myInit);
+  //return await API.post(apiName, path, myInit);
 }
