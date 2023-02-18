@@ -1,5 +1,3 @@
-import getParameter from "./get-paramenter"
-
 $( document ).ready(function() {
     var pageURL = window.location.href;
     pageURL = pageURL.toString();
