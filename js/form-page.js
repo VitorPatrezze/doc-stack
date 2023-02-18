@@ -4,7 +4,7 @@ $( document ).ready(function() {
     console.log(" page url: " + pageURL);
 
     // Gets url strings
-    var paramIndex = pageURL.indexOf("?"); // When page is hosted on the web, use '?'
+    var paramIndex = pageURL.indexOf("#"); // When page is hosted on the web, use '?'
     if (paramIndex === -1) {
         return;
     }
