@@ -16,6 +16,7 @@ $( document ).ready(function() {
     // Extracts the encoded tokens from url parameters
     idToken = getParameter(parameters, "id_token=");
     accessToken = getParameter(parameters, "access_token=");   
+    console.log("saved access token: " + accessToken);
     sessionStorage.setItem("id_token", idToken);
     sessionStorage.setItem("access_token", accessToken);
 });

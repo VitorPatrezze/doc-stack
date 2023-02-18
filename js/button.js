@@ -13,6 +13,7 @@ async function postData(form) {
   const path = '/path';
   const idToken = sessionStorage.getItem("id_token");
   const accessToken = sessionStorage.getItem("access_token");
+  console.log("access token: " + accessToken);
   const myInit = {
     headers: {
       Authorization: `Auth ${accessToken}`
