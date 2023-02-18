@@ -1,4 +1,10 @@
-var authToken;
+
+// import { Auth } from 'aws-amplify';
+
+// Auth.currentSession()
+//   .then((data) => console.log(data))
+//   .catch((err) => console.log(err));
+
 
 function handleRequestClick(form) {
     var dict = {}

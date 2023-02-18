@@ -16,25 +16,25 @@ window._config = {
 Amplify.configure(awsconfig);
 
 
-Amplify.configure({
-    // OPTIONAL - if your API requires authentication 
-    Auth: {
-        identityPoolId: 'XX-XXXX-X:XXXXXXXX-XXXX-1234-abcd-1234567890ab', // REQUIRED - Amazon Cognito Identity Pool ID
-        region: 'us-east-1', // REQUIRED - Amazon Cognito Region
-        userPoolId: 'us-east-1_buvZpBUk4', // OPTIONAL - Amazon Cognito User Pool ID
-        userPoolWebClientId: 'k2mkluc52qg18e7tcm0hppp91', // OPTIONAL - Amazon Cognito Web Client ID (26-char alphanumeric string)
-    },
-    API: {
-        endpoints: [
-            {
-                name: "MyAPIGatewayAPI",
-                endpoint: "https://1234567890-abcdefgh.amazonaws.com"
-            },
-            {
-                name: "MyCustomCloudFrontApi",
-                endpoint: "https://api.my-custom-cloudfront-domain.com",
+// Amplify.configure({
+//     // OPTIONAL - if your API requires authentication 
+//     Auth: {
+//         identityPoolId: 'XX-XXXX-X:XXXXXXXX-XXXX-1234-abcd-1234567890ab', // REQUIRED - Amazon Cognito Identity Pool ID
+//         region: 'us-east-1', // REQUIRED - Amazon Cognito Region
+//         userPoolId: 'us-east-1_buvZpBUk4', // OPTIONAL - Amazon Cognito User Pool ID
+//         userPoolWebClientId: 'k2mkluc52qg18e7tcm0hppp91', // OPTIONAL - Amazon Cognito Web Client ID (26-char alphanumeric string)
+//     },
+//     API: {
+//         endpoints: [
+//             {
+//                 name: "MyAPIGatewayAPI",
+//                 endpoint: "https://1234567890-abcdefgh.amazonaws.com"
+//             },
+//             {
+//                 name: "MyCustomCloudFrontApi",
+//                 endpoint: "https://api.my-custom-cloudfront-domain.com",
 
-            }
-        ]
-    }
-});
+//             }
+//         ]
+//     }
+// });
