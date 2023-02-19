@@ -13,11 +13,12 @@ async function postData(form) {
   const accessToken = sessionStorage.getItem("access_token");
   const idToken = sessionStorage.getItem("id_token");
 
+  console.log("will fetch");
   fetch('https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/test', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': idToken
+      'Auth': accessToken
     },
     body: JSON.stringify(form)
   })
