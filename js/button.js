@@ -15,7 +15,6 @@ async function postData(form) {
   let xhr = new XMLHttpRequest();
   xhr.open("POST", "https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/test");
   xhr.setRequestHeader("Authorization", idToken);
-  xhr.setRequestHeader("Accept", "application/json");
   xhr.setRequestHeader("Content-Type", "application/json");
   console.log("Teste");
   console.log(xhr);
