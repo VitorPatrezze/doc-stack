@@ -11,9 +11,10 @@ async function postData(form) {
 
   const path = '/dev/test';
   const accessToken = sessionStorage.getItem("access_token");
+  const idToken = sessionStorage.getItem("id_token");
   let xhr = new XMLHttpRequest();
   xhr.open("POST", "https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/test");
-  xhr.setRequestHeader("Authorization", accessToken);
+  xhr.setRequestHeader("Authorization", idToken);
   xhr.setRequestHeader("Accept", "application/json");
   xhr.setRequestHeader("Content-Type", "application/json");
   console.log("Teste");
