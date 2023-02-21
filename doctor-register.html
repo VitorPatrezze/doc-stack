@@ -40,10 +40,12 @@
 
         <main class="container-fluid py-5 text-center">
             USER HOMEPAGE
-            <form id="test" action="https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/test" method="post">
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="v1" placeholder="Value 1" type="text">
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="v2" placeholder="Value 2" type="text">
-                <button id="request" class="btn btn-primary" type="button" onclick="handleRequestClick(document.getElementById('test'))">SEND</button>
+            <form id="docform" action="https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/test" method="post">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="name" placeholder="Name" type="text">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="crm" placeholder="CRM" type="text">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="cpf" placeholder="CPF" type="text">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="state" placeholder="Estado" type="text">
+                <button id="request" class="btn btn-primary" type="button" onclick="handleRequestClick(document.getElementById('docform'))">SEND</button>
             </form>
         </main>
 

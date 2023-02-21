@@ -3,10 +3,10 @@ function handleRequestClick(form) {
   for (let i = 0; i < form.length; i++) {
     dict[form.elements[i].name] = form.elements[i].value
   }
-  postData(dict);
+  postData(form.id, dict);
 }
 
-async function postData(form) {
+async function postData(uri, form) {
 
   const path = '/dev/test';
   const accessToken = sessionStorage.getItem("access_token");
@@ -14,7 +14,7 @@ async function postData(form) {
 
   console.log(form);
 
-  await fetch('https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/test', {
+  await fetch('https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/' + uri, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
