@@ -8,9 +8,6 @@ function handleRequestClick(form) {
 
 async function postData(uri, form) {
   const accessToken = sessionStorage.getItem("access_token");
-  const idToken = sessionStorage.getItem("id_token");
-
-  console.log(form);
 
   await fetch('https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/' + uri, {
     method: 'POST',
