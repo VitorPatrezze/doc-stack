@@ -7,8 +7,6 @@ function handleRequestClick(form) {
 }
 
 async function postData(uri, form) {
-
-  const path = '/dev/test';
   const accessToken = sessionStorage.getItem("access_token");
   const idToken = sessionStorage.getItem("id_token");
 

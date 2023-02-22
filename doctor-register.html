@@ -24,12 +24,13 @@
 
         <nav class="bg-light border navbar navbar-expand-md navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/">DocStack</a>
+                <a class="navbar-brand" href="/">Livro da Dor</a>
                 <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a href="" class="nav-item">Form</a>
-                <a href="" class="nav-item">Portfolio</a>
+                <a href="/form" class="nav-item">Form</a>
+                <a href="/portfolio" class="nav-item">Portfolio</a>
+                <a href="/doctor-register.html" class="nav-item">Register Doctor</a>
                 <a href="https://livrodador.auth.us-east-1.amazoncognito.com/logout?client_id=k2mkluc52qg18e7tcm0hppp91&logout_uri=https://main.d2usci1jry67pf.amplifyapp.com/" class="nav-item">Log Out</a>
                 <div class="collapse navbar-collapse" id="navbar">
                 </div>
@@ -39,14 +40,14 @@
         
 
         <main class="container-fluid py-5 text-center">
-            USER HOMEPAGE
-            <form id="docform" action="https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/test" method="post">
+            REGISTER AS DOCTOR
+            <form id="doctor" action="https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/doctor" method="post">
                 <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="name" placeholder="Name" type="text">
                 <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="crm" placeholder="CRM" type="text">
                 <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="cpf" placeholder="CPF" type="text">
                 <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="state" placeholder="Estado" type="text">
-                <button id="request" class="btn btn-primary" type="button" onclick="handleRequestClick(document.getElementById('docform'))">SEND</button>
             </form>
+            <button id="request" class="btn btn-primary" type="button" onclick="handleRequestClick(document.getElementById('docform'))">SEND</button>
         </main>
 
         <footer class="mb-5 small text-center text-muted">
@@ -57,7 +58,6 @@
         <script src="js/vendor/aws-cognito-sdk.min.js"></script>
         <script src="js/vendor/amazon-cognito-identity.min.js"></script>
         <script src="https://js.arcgis.com/4.3/"></script>
-        <script src="js/form-page.js"></script>
         <script src="js/button.js"></script>
     </body>
 
