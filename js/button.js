@@ -5,7 +5,7 @@ function handleRequestClick(form) {
     if (form.elements[i].type === "checkbox") {
       if (form.elements[i].checked) {
         dict = createArray(dict, form.elements[i]);
-        dict[form.elements[i].parentNode.id] += form.elements[i].value
+        dict[form.elements[i].parentNode.id] += (form.elements[i].value + ", ")
       }
     } else {
       if (isNaN(form.elements[i].value)) {
