@@ -1,7 +1,7 @@
 function handleRequestClick(form) {
-  preventDefault();
   var dict = {};
-  for (let i = 0; i < form.length; i++) {
+  const l = form.length;
+  for (let i = 0; i < l; i++) {
     dict[form.elements[i].name] = form.elements[i].value
   }
   postData(form.id, dict).then(
