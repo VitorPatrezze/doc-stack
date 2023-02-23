@@ -44,11 +44,11 @@
                 <label for="initials">Iniciais:</label>
                 <input id="initials" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="initials" type="text"><br>
                 <label for="age">Idade:</label>
-                <input id="age" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="age" type="number"><br>
+                <input id="age" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="age" type="number" step="1"><br>
                 <label for="weight">Peso (kg):</label>
-                <input id="weight" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="weight" type="number"><br>
+                <input id="weight" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="weight" type="number" step=".01"><br>
                 <label for="height">Altura (cm):</label>
-                <input id="height" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="height" type="number"><br>
+                <input id="height" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="height" type="number" step=".01"><br>
                 <label for="comorbidities">Comorbidades:</label>
                 <input id="comorbidities" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="comorbidities" type="text"><br>
                 <label for="diagnosis">Diagnóstico:</label>
@@ -63,13 +63,13 @@
                     <input type="checkbox" value="other"> outro<br>
                 </div>
                 <label for="duration">Duração da Anestesia (min):</label>
-                <input id="duration" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="duration"  type="number"><br>
+                <input id="duration" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="duration"  type="number" step="1"><br>
                 <label for="surgery-duration">Duração da Cirurgia (min):</label>
-                <input id="surgery-duration" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="surgery-duration"  type="number"><br>
+                <input id="surgery-duration" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="surgery-duration"  type="number" step="1"><br>
                 <label for="anesthesia-info">Informações da Anestesia:</label>
                 <input id="anesthesia-info" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="anesthesia-info"  type="text"><br>
-                <label for="lock-info">Informações do Bloqueio:</label>
-                <input id="lock-info" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="lock-info"  type="text"><br>
+                <label for="blockade-info">Informações do Bloqueio:</label>
+                <input id="blockade-info" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="blockade-info"  type="text"><br>
                 <label for="intraoperative">Dados intra-operatórios:</label>
                 <input id="intraoperative" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="intraoperative" type="text"><br>
                 <label for="medications">Medicações adjuvantes:</label>
@@ -89,9 +89,8 @@
                     <input type="checkbox" value="gluconatodecalcio"> Gluconato de cálcio<br>
                     <input type="checkbox" value="other"> Outro<br>
                 </div>
-                <label for="aditional-info">Informações adicionais:</label>
-                <input id="aditional-info" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="aditional-info" placeholder="Nenhuma" type="text"><br>
-                
+                <label for="additional-info">Informações adicionais:</label>
+                <input id="additional-info" autocomplete="off" autofocus class="form-control mx-auto w-auto" name="additional-info" placeholder="Nenhuma" type="text"><br>
             </form> 
             <button id="request" class="btn btn-primary" type="button" onclick="handleRequestClick(document.getElementById('anesthesia-record'))">SEND</button>
         </main>
