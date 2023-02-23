@@ -5,10 +5,14 @@ function handleRequestClick(form) {
     if (form.elements[i].type === "checkbox") {
       if (form.elements[i].checked) {
         dict = createArray(dict, form.elements[i]);
-        dict[form.elements[i].parentNode.id].push(form.elements[i].value) 
+        dict[form.elements[i].parentNode.id] += form.elements[i].value
       }
     } else {
-      dict[form.elements[i].name] = form.elements[i].value
+      if (isNaN(form.elements[i].value)) {
+        dict[form.elements[i].name] = form.elements[i].value
+      } else {
+        dict[form.elements[i].name] = (form.elements[i].value * 1)
+      }
     }
 
   }
@@ -37,7 +41,7 @@ async function postData(uri, form) {
 function createArray(dict, element) {
   const name = element.parentNode.id;
   if (!(name in dict)) {
-    dict[name] = []
+    dict[name] = ""
   }
   return dict
 }
