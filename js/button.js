@@ -1,5 +1,6 @@
 function handleRequestClick(form) {
-  var dict = {}
+  preventDefault();
+  var dict = {};
   for (let i = 0; i < form.length; i++) {
     dict[form.elements[i].name] = form.elements[i].value
   }
