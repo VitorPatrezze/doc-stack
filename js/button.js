@@ -2,8 +2,17 @@ function handleRequestClick(form) {
   var dict = {};
   const l = form.length;
   for (let i = 0; i < l; i++) {
-    dict[form.elements[i].name] = form.elements[i].value
+    if (form.elements[i].type === "checkbox") {
+      if (form.elements[i].checked) {
+        dict = createArray(dict, form.elements[i]);
+        dict[form.elements[i].parentNode.id].push(form.elements[i].value) 
+      }
+    } else {
+      dict[form.elements[i].name] = form.elements[i].value
+    }
+
   }
+  console.log(dict)
   postData(form.id, dict).then(
     window.location.href = "https://main.d3koga650buw25.amplifyapp.com/home"
 )
@@ -23,5 +32,13 @@ async function postData(uri, form) {
   })
     .then(response => response.json())
     .then(response => console.log(JSON.stringify(response)));
+}
+
+function createArray(dict, element) {
+  const name = element.parentNode.id;
+  if (!(name in dict)) {
+    dict[name] = []
+  }
+  return dict
 }
 
