@@ -23,7 +23,7 @@ $( document ).ready(function() {
 });
 
 /**
- * Takes the url parameters and extracts the field that matches the "param" 
+ * Takes the url parameters and extracts the field outhat matches the "param" 
  * input.
  * @param {type} url, contains URL parameters
  * @param {type} param, field to look for in url
@@ -45,46 +45,3 @@ function getParameter(url, param) {
     }
     return returnValue;
 }
-
-// function handleRequestClick(form) {
-//     console.log("id token: " + idToken);
-//     console.log("access token: " + accessToken);
-//     // var dict = {}
-//     // for (let i = 0; i < form.length; i++)
-//     // {
-//     //     dict[form.elements[i].name] = form.elements[i].value
-//     //     console.log(form.elements[i].value)
-//     // }
-//     // console.log("dict to post: " + dict)
-//     // postData(dict);
-// }
-
-// async function postData(form) {
-//   const path = '/dev/test';
-//   const myInit = {
-//     headers: {
-//       Authorization: `Bearer ${(await Auth.currentSession())
-//         .getIdToken()
-//         .getJwtToken()}`
-//     }
-//   };
-//   fetch("URL", {
-//     method: 'POST',
-//     headers: {
-//     'Accept': 'application/json',
-//     'Content-Type': 'application/json'
-//     },
-//     body: `{
-//     "Id": 78912,
-//     "Customer": "Jason Sweet",
-//     "Quantity": 1,
-//     "Price": 18.00
-//     }`,
-//     });
-
-//     response.json().then(data => {
-//     console.log(data);
-//     });
-
-//   return await API.post(apiName, path, myInit);
-// }

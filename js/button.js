@@ -3,7 +3,10 @@ function handleRequestClick(form) {
   for (let i = 0; i < form.length; i++) {
     dict[form.elements[i].name] = form.elements[i].value
   }
-  postData(form.id, dict);
+  postData(form.id, dict).then(
+    window.location.href = "https://main.d3koga650buw25.amplifyapp.com/home"
+)
+
 }
 
 async function postData(uri, form) {
