@@ -5,7 +5,7 @@ function handleRequestClick(form) {
     if (form.elements[i].type === "checkbox") {
       if (form.elements[i].checked) {
         dict = createArray(dict, form.elements[i]);
-        dict[form.elements[i].parentNode.id] += (form.elements[i].value + ", ")
+        dict[form.elements[i].parentNode.id] += (form.elements[i].value)
       }
     } else {
       if (isNaN(form.elements[i].value)) {
@@ -17,10 +17,9 @@ function handleRequestClick(form) {
 
   }
   console.log(dict)
-  postData(form.id, dict).then(
-    window.location.href = "https://main.d3koga650buw25.amplifyapp.com/home"
-)
-
+// postData(form.id, dict).then(
+//     window.location.href = "https://main.d3koga650buw25.amplifyapp.com/home"  
+// )
 }
 
 async function postData(uri, form) {
@@ -42,6 +41,8 @@ function createArray(dict, element) {
   const name = element.parentNode.id;
   if (!(name in dict)) {
     dict[name] = ""
+  } else {
+    dict[name] += ", "
   }
   return dict
 }

@@ -22,12 +22,6 @@ nav .navbar-brand .green
     color: #2e944b;
 }
 
-input {
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 button {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -64,4 +58,22 @@ table td {
 
 tbody tr:nth-of-type(odd) {
     background-color: rgb(179, 208, 255, 0.3)
+}
+
+.form-class {
+    width: 70%;
+    margin: auto;
+    background-color: whitesmoke;
+    padding: 1rem;  
+    border-radius: 1rem;
+}
+
+label {
+    margin-right: 1rem;
+}
+
+.label-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
 }
