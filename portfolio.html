@@ -43,22 +43,33 @@
             <form id="consult-crm" class="form-class" method="get">
                 <div class="form-group">
                     <div class="label-container">
-                        <label for="crm">CRM</label> 
+                        <label for="crm">CRM 1234</label> 
                     </div>
-                    <input id="initials" autocomplete="off" autofocus class="form-control" name="crm" type="text">
+                    <input id="initials" autocomplete="on" autofocus class="form-control" name="crm" type="text">
                 </div>
             </form>
-            <button id="request" class="btn btn-primary" type="submit" onclick="handleRequestClick(document.getElementById('consult-crm'));">Consultar</button>
+            <button id="request" class="btn btn-primary" type="submit" onclick="handleConsult(document.getElementById('consult-crm'));">Consultar</button>
+
+            <table id="table-main" class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Diagnóstico</th>
+                    <th scope="col">Anestesia</th>
+                    <th scope="col">Duração</th>
+                  </tr>
+                </thead>
+                <tbody id="table-body">
+                  
+                </tbody>
+              </table>
         </main>
 
         <footer class="mb-5 small text-center text-muted">
            
         </footer>
-        <script src="js/vendor/jquery-3.1.0.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/aws-cognito-sdk.min.js"></script>
-        <script src="js/vendor/amazon-cognito-identity.min.js"></script>
-        <script src="https://js.arcgis.com/4.3/"></script>
+
+        <script src="js/consult.js"></script>
     </body>
 
 
