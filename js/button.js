@@ -16,13 +16,12 @@ function handleRequestClick(form) {
     }
 
   }
-  console.log(dict)
-// postData(form.id, dict).then(
-//     window.location.href = "https://main.d3koga650buw25.amplifyapp.com/home"  
-// )
+  postData(form.id, dict).then(
+      window.location.href = "https://main.d3koga650buw25.amplifyapp.com/home"  
+  )
 }
 
-async function postData(uri, form) {
+async function postData(uri, dict) {
   const accessToken = sessionStorage.getItem("access_token");
 
   await fetch('https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/' + uri, {
@@ -31,7 +30,7 @@ async function postData(uri, form) {
       'Content-Type': 'application/json',
       'Auth': accessToken
     },
-    body: JSON.stringify(form)
+    body: JSON.stringify(dict)
   })
     .then(response => response.json())
     .then(response => console.log(JSON.stringify(response)));

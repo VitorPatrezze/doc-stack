@@ -40,7 +40,15 @@
         
 
         <main class="container-fluid py-5 text-center">
-            PORTFOLIO
+            <form id="consult-crm" class="form-class" method="get">
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="crm">CRM</label> 
+                    </div>
+                    <input id="initials" autocomplete="off" autofocus class="form-control" name="crm" type="text">
+                </div>
+            </form>
+            <button id="request" class="btn btn-primary" type="submit" onclick="handleRequestClick(document.getElementById('consult-crm'));">Consultar</button>
         </main>
 
         <footer class="mb-5 small text-center text-muted">
