@@ -1,6 +1,5 @@
 function handleConsult(form) {
     const crm = form["crm"].value
-    console.log(crm)
     const uri = form.id + '?crm=' + crm
     getData(uri)
 }
