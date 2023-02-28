@@ -28,7 +28,19 @@ nav .navbar-brand .green
     background-color: #ea433b;
     padding: .3rem;
     font-weight: bold;
-    text: white;
+}
+
+.form-slim {
+    max-width: 30rem;
+    min-width: 10rem;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2rem;
 }
 
 .nav-button {
@@ -49,11 +61,6 @@ nav .navbar-brand .green
 
 body {
     background-color: lightgrey;
-}
-
-button {
-    margin-left: 1rem;
-    margin-right: 1rem;
 }
 
 h3, h2 {
