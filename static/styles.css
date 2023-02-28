@@ -22,6 +22,10 @@ nav .navbar-brand .green
     color: #2e944b;
 }
 
+body {
+    background-color: lightgrey;
+}
+
 button {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -30,7 +34,6 @@ button {
 h3, h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
-    background-color: #d9edff;
 }
 
 header {

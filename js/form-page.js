@@ -14,8 +14,9 @@ $( document ).ready(function() {
     var parameters = pageURL.substring(paramIndex + 1);
 
     // Extracts the encoded tokens from url parameters
+    console.log( AWSMobileClient.getInstance().getTokens().getIdToken().getClaim("sub"));
     idToken = getParameter(parameters, "id_token=");
-    accessToken = getParameter(parameters, "access_token=");   
+    accessToken = getParameter(parameters, "access_token=");
     console.log("id token: " + idToken);
     console.log("access token: " + accessToken);
     sessionStorage.setItem("id_token", idToken);
