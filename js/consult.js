@@ -18,8 +18,8 @@ async function getData(uri) {
         .then((data) => {
             const body = JSON.parse(data["body"])
             const rows = body["rows"]
+            tableBody = document.getElementById("table-main")
             for (var i = 0; i < rows.length; i++) {
-                tableBody = document.getElementById("table-main")
                 var row = tableBody.insertRow(-1);
 
                 var cell1 = row.insertCell(0);
