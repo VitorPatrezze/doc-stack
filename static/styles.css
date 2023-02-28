@@ -22,6 +22,31 @@ nav .navbar-brand .green
     color: #2e944b;
 }
 
+.nav-logout {
+    border-radius: .5rem;
+    align-items: center;
+    background-color: #ea433b;
+    padding: .3rem;
+    font-weight: bold;
+    text: white;
+}
+
+.nav-button {
+    margin-inline: 1rem;
+    font-weight: bold;
+}
+
+.navbar-index {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.explanation-temp-text {
+    margin: 3rem;
+    color: grey;
+}
+
 body {
     background-color: lightgrey;
 }

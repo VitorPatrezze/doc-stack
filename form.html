@@ -21,16 +21,22 @@
     <body>
 
         <nav class="bg-light border navbar navbar-expand-md navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">Livro da Dor</a>
-                <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+            <div class="container-fluid navbar-spaced">
+                <a class="navbar-brand" href="/">DocStack</a>
+                <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                    data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a href="./form" class="nav-item">Form</a>
-                <a href="./portfolio" class="nav-item">Portfolio</a>
-                <a href="./doctor-register" class="nav-item">Register Doctor</a>
-                <a href="https://livrodador.auth.us-east-1.amazoncognito.com/logout?client_id=k2mkluc52qg18e7tcm0hppp91&logout_uri=https://main.d2usci1jry67pf.amplifyapp.com/" class="nav-item">Log Out</a>
                 <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav me-auto mt-2">
+                        <li class="nav-item nav-button"><a href="/form" class="nav-link">Form</a></li>
+                        <li class="nav-item nav-button"><a href="/portfolio" class="nav-link">Portfolio</a></li>
+                        <li class="nav-item nav-button"><a href="/doctor-register" class="nav-link">Register doctor</a></li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto mt-2">
+                        <li class="nav-item nav-logout"><a href="https://livrodador.auth.us-east-1.amazoncognito.com/login?client_id=k2mkluc52qg18e7tcm0hppp91&response_type=token&scope=email+openid&redirect_uri=https://main.d3koga650buw25.amplifyapp.com/"
+                            class="nav-link">Logout</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
