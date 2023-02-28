@@ -11,7 +11,7 @@ async function getData(uri) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'Auth': 'eyJraWQiOiJlcHBFd3lCVGlmNk5YUm5qUE5iVnlMM0VIQ25Ra2F4ak9FRzhOd2RSMVlFPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4MTg2YjU5Yi1jNmMzLTQwMDQtYWEzMC00MGYwMDZkZTdmODYiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9idXZacEJVazQiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiJrMm1rbHVjNTJxZzE4ZTd0Y20waHBwcDkxIiwiZXZlbnRfaWQiOiI5NzhjN2QxMC05M2ExLTQzZjgtOTkxNy01YzA2M2M0ZDY5N2QiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6Im9wZW5pZCBlbWFpbCIsImF1dGhfdGltZSI6MTY3NzUzMDk1NCwiZXhwIjoxNjc3NTM0NTU0LCJpYXQiOjE2Nzc1MzA5NTQsImp0aSI6ImQ0MTRiNDI2LWQxYjctNDE0Ny1iMGYxLTNmODZlNjNjYjE0OSIsInVzZXJuYW1lIjoidGVzdGUyIn0.o8eknrkU3PB4YKOevhqG2P86kXZcaKBLvApW0UzgmC0H_R5VBhF3RS7D2ZsQgqF3PfE_7RpH3yvkzG2DYZZp412Wo39FWh1sFvVmHdC9_4A16l4U40RckJDWgpgB7rhM6hqWp-OCzbp2gzaCu9uFkxGAQiYkht-8P6s9Q52I2p6kXZvF-W8Srys7m85mm2SRVxdGfezzUecfiNHTW3OLJ5wJwN1RSqVo1Zj1YstyP5ThHQe63BDRCybV3zoZmeo7dbBmQf7orUnLiD0cd_WHiTALey3Cv3dA9APGXa5-uNz9s91znjGsbKyh_RdOr6IHIP2ThMfCAqMEHFD_g4OYpA'
+            'Auth': accessToken
         }
     })
         .then(response => response.json())
