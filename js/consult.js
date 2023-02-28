@@ -1,4 +1,5 @@
 function handleConsult(form) {
+    $('#table-main tr:not(:first)').remove();
     const crm = form["crm"].value
     const uri = form.id + '?crm=' + crm
     getData(uri)
@@ -17,7 +18,6 @@ async function getData(uri) {
         .then((data) => {
             const body = JSON.parse(data["body"])
             const rows = body["rows"]
-            console.log
             for (var i = 0; i < rows.length; i++) {
                 tableBody = document.getElementById("table-main")
                 var row = tableBody.insertRow(-1);
@@ -32,8 +32,8 @@ async function getData(uri) {
                 cell2.innerHTML = rows[i]["diagnosis"];
                 cell3.innerHTML = rows[i]["anesthesia"];
                 cell4.innerHTML = rows[i]["duration"];
-                cell5.innerHTML = rows[i]["hospital-id"];
-                cell6.innerHTML = rows[i]["created-at"];
+                cell5.innerHTML = rows[i]["hospital_id"];
+                cell6.innerHTML = rows[i]["created_at"];
             }
         })
 }
