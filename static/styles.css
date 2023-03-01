@@ -41,6 +41,7 @@ nav .navbar-brand .green
     justify-content: center;
     margin: auto;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .nav-button {
@@ -105,10 +106,11 @@ tbody tr:nth-of-type(odd) {
 
 label {
     margin-right: 1rem;
+    align-items: end;
 }
 
 .label-container {
-    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
+    align-items: end;
 }
