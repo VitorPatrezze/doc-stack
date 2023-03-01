@@ -33,7 +33,7 @@ async function getData(uri) {
                 cell3.innerHTML = rows[i]["anesthesia"];
                 cell4.innerHTML = rows[i]["duration"];
                 cell5.innerHTML = rows[i]["hospital_id"];
-                cell6.innerHTML = rows[i]["created_at"];
+                cell6.innerHTML = moment(rows[i]["created_at"], "YYYY-MM-DD").format("MM/DD/YY");
             }
         })
 }
