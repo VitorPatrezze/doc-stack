@@ -61,7 +61,7 @@ nav .navbar-brand .green
 }
 
 body {
-    background-color: lightgrey;
+    background-color: #6b96bb;
 }
 
 h3, h2 {
@@ -99,6 +99,7 @@ tbody tr:nth-of-type(odd) {
 .form-class {
     width: 70%;
     margin: auto;
+    margin-bottom: 3rem;
     background-color: whitesmoke;
     padding: 1rem;  
     border-radius: 1rem;

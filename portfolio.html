@@ -49,15 +49,15 @@
         <form id="consult-crm" class="form-class" method="get">
             <div class="form-group">
                 <div class="label-container">
-                    <label for="crm">CRM 1234</label>
+                    <label for="crm">CRM</label>
                 </div>
                 <input id="initials" autocomplete="on" autofocus class="form-control" name="crm" type="text">
             </div>
+            <div class="button-container">
+                <button id="request" class="btn btn-primary" type="submit"
+                onclick="handleConsult(document.getElementById('consult-crm'));">Consultar</button>
+            </div>
         </form>
-        <div class="button-container">
-            <button id="request" class="btn btn-primary" type="submit"
-            onclick="handleConsult(document.getElementById('consult-crm'));">Consultar</button>
-        </div>
 
         <table id="table-main" class="table form-class">
             <thead>
