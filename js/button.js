@@ -8,13 +8,14 @@ function handleRequestClick(form) {
         dict[form.elements[i].parentNode.id] += (form.elements[i].value)
       }
     } else {
-      if (isNaN(form.elements[i].value)) {
+      if (form.elements[i].name == "") {
+        
+      } else if (isNaN(form.elements[i].value)) {
         dict[form.elements[i].name] = form.elements[i].value
       } else {
         dict[form.elements[i].name] = (form.elements[i].value * 1)
       }
     }
-
   }
   postData(form.id, dict).then(
       window.location.href = "https://main.d3koga650buw25.amplifyapp.com/home"  
