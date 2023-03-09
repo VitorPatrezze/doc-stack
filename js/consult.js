@@ -1,6 +1,6 @@
 function handleConsult(form) {
     $('#table-main tr:not(:first)').remove();
-    const crm = form["crm"].value
+    const crm = form["crm"].value * 1
     const uri = form.id + '?crm=' + crm
     getData(uri)
 }
