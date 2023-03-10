@@ -44,15 +44,17 @@
                     </div>
                     <input id="date" autocomplete="off" autofocus class="form-control" name="date" type="date">
                 </div>
+                <div class="button-container">
+                    <button id="request" class="btn btn-primary" type="submit" onclick="getProcedure(document.getElementById('get-procedure'));">SEND</button>
+                </div>
             </form> 
         </main>
 
         <script src="js/vendor/jquery-3.1.0.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="https://js.arcgis.com/4.3/"></script>
-        <script src="js/button.js"></script>     
+        <script src="js/get-procedure-button.js"></script>     
         <script src="js/load-nav.js"></script>   
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script>
             // Example starter JavaScript for disabling form submissions if there are invalid fields
             (function() {

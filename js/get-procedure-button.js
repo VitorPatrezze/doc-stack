@@ -1,4 +1,4 @@
-function handleRequestClick(form) {
+function getProcedure(form) {
   var dict = {};
   const l = form.length;
   for (let i = 0; i < l; i++) {
@@ -17,9 +17,7 @@ function handleRequestClick(form) {
       }
     }
   }
-  postData(form.id, dict).then(
-      window.location.href = "https://main.d3koga650buw25.amplifyapp.com/home"  
-  )
+  postData(form.id, dict)
 }
 
 async function postData(uri, dict) {
@@ -34,6 +32,7 @@ async function postData(uri, dict) {
     body: JSON.stringify(dict)
   })
     .then(response => response.json())
+    .then(response => console.log(JSON.stringify(response)));
 }
 
 function createArray(dict, element) {
