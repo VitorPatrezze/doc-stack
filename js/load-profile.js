@@ -1,11 +1,10 @@
 $( document ).ready(function() {
-    const accessToken = sessionStorage.getItem("access_token");
     const info = getProfile(accessToken)
 });
 
 
-async function getProfile(accessToken) {
-  
+async function getProfile() {
+    const accessToken = sessionStorage.getItem("access_token");
     await fetch('https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/doctors', {
       method: 'GET',
       headers: {
@@ -14,5 +13,5 @@ async function getProfile(accessToken) {
       }
     })
       .then(response => response.json())
-      .then(console.log(response))
+      .then(response => console.log(response))
 }
