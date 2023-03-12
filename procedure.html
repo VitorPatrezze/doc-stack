@@ -47,7 +47,21 @@
                 <div class="button-container">
                     <button id="request" class="btn btn-primary" type="button" onclick="getProcedure(document.getElementById('get-procedure'));">SEND</button>
                 </div>
-            </form> 
+            </form>
+
+            <table id="table-main" class="table form-class">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Iniciais</th>
+                        <th scope="col">Hospital</th>
+                        <th scope="col">Data</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+    
+                </tbody>
+            </table>
         </main>
 
         <script src="js/vendor/jquery-3.1.0.js"></script>

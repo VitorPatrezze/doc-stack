@@ -32,7 +32,24 @@ async function postData(uri, dict) {
     body: JSON.stringify(dict)
   })
     .then(response => response.json())
-    .then(response => console.log(JSON.stringify(response)));
+    .then((data) => {
+        const body = JSON.parse(data["body"])
+        const rows = body["result"]
+        tableBody = document.getElementById("table-main")
+        for (var i = 0; i < rows.length; i++) {
+            var row = tableBody.insertRow(-1);
+
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+
+            cell1.innerHTML = i;
+            cell2.innerHTML = rows[i]["initials"];
+            cell3.innerHTML = rows[i]["hospital"];
+            cell4.innerHTML = rows[i]["ocurred_at"];
+        }
+    })
 }
 
 function createArray(dict, element) {
