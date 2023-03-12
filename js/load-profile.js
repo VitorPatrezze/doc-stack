@@ -1,7 +1,6 @@
-$( document ).ready(function() {
-    const info = getProfile()
-});
-
+function profile() {
+    getProfile();
+}
 
 async function getProfile() {
     const accessToken = sessionStorage.getItem("access_token");
