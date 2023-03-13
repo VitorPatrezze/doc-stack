@@ -22,54 +22,7 @@
     <nav id="nav"></nav>
 
     <main class="container-fluid py-5">
-        <form id="doctor" class="form-class form-slim">
-            <div class="form-group">
-                <div class="label-container">
-                    <label for="name">Nome Completo</label>
-                </div>
-                <input id="name" autocomplete="off" autofocus class="form-control" name="name" type="text">
-            </div>
-            <div class="form-group">
-                <div class="label-container">
-                    <label for="crm">CRM</label>
-                    <small class="form-text text-muted">Número do CRM</small>    
-                </div>
-                <input id="crm" autocomplete="off" autofocus class="form-control" name="crm" type="text">
-            </div>
-            <div class="form-group">
-                <div class="label-container">
-                    <label for="state">Estado</label>
-                    <small class="form-text text-muted">Estado de emissão do CRM</small>    
-                </div>
-                <input id="state" autocomplete="off" autofocus class="form-control" name="state" type="text">
-            </div>
-            <div class="form-group">
-                <div class="label-container">
-                    <label for="date">Data de Emissão</label>
-                    <small class="form-text text-muted">Data de emissão do CRM</small>    
-                </div>
-                <input id="date" autocomplete="off" autofocus class="form-control" name="date" type="date">
-            </div>
-            <div class="form-group">
-                <div class="label-container">
-                    <label for="specialty">Especialidade</label>
-                </div>
-                <input id="specialty" autocomplete="off" autofocus class="form-control" name="specialty" type="text">
-            </div>
-            <div class="form-group">
-                <div class="label-container">
-                    <label for="birth">Ano de nascimento</label>
-                    <small class="form-text text-muted">Apenas o ano de nascimento (ex: 1998)</small>
-                </div>
-                <input id="birth" autocomplete="off" autofocus class="form-control" name="birth" type="number">
-            </div>
-            <div class="button-container">
-                <button id="request" class="btn btn-primary button-send" type="button" onclick="handleRequestClick(document.getElementById('doctor'))">SEND</button>
-            </div>
-        </form> 
-        <div class="button-container">
-            <button id="teste" class="btn btn-primary button-send" type="button" onclick="profile()">Profile</button>
-        </div>
+        <div id="profile-div"></div>
     </main>
 
     <footer class="mb-5 small text-center text-muted">

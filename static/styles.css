@@ -1,24 +1,22 @@
 /* Size for brand */
-nav .navbar-brand
-{
+nav .navbar-brand {
     font-size: xx-large;
 }
 
 /* Colors for brand */
-nav .navbar-brand .blue
-{
+nav .navbar-brand .blue {
     color: #537fbe;
 }
-nav .navbar-brand .red
-{
+
+nav .navbar-brand .red {
     color: #ea433b;
 }
-nav .navbar-brand .yellow
-{
+
+nav .navbar-brand .yellow {
     color: #f5b82e;
 }
-nav .navbar-brand .green
-{
+
+nav .navbar-brand .green {
     color: #2e944b;
 }
 
@@ -64,7 +62,8 @@ body {
     background-color: #7eb0db;
 }
 
-h3, h2 {
+h3,
+h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
 }
@@ -96,12 +95,13 @@ tbody tr:nth-of-type(odd) {
     background-color: rgb(179, 208, 255, 0.3)
 }
 
-.form-class {
+.content-block {
+    font: 'Montserrat', sans-serif;
     width: 70%;
     margin: auto;
     margin-bottom: 3rem;
     background-color: whitesmoke;
-    padding: 1rem;  
+    padding: 1rem;
     border-radius: 1rem;
 }
 
@@ -114,4 +114,23 @@ label {
     display: flex;
     justify-content: space-between;
     align-items: end;
+}
+
+.profile-info label {
+    align-content: center;
+    margin: auto;
+    font-size: 1rem;
+}
+
+
+.profile-info-value {
+    font-weight: bold;
+    width: auto ;
+    margin-bottom: 1rem;
+}
+
+.procedures-section {
+    border-top: 1px solid;
+    border-color: grey;
+    padding-top: 1rem;
 }
