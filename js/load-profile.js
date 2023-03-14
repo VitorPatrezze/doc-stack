@@ -14,7 +14,6 @@ async function getProfile() {
     .then(response => response.json())
     .then(response => {
       let body = JSON.parse(response["body"])
-      console.log(body)
       if (body["code"] == 403) {
         $("#profile-div").load("templates/register-doctor-form.html");  
       } else {

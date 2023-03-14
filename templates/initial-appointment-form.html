@@ -1,0 +1,36 @@
+
+<form id="get-procedure" class="content-block">
+    <div class="form-group">
+        <div class="label-container">
+            <label for="initials">Iniciais</label>
+            <small class="form-text text-muted">Iniciais do paciente</small>
+        </div>
+        <input id="initials" autocomplete="off" autofocus class="form-control" name="initials" type="text">
+    </div>
+    <div class="form-group">
+        <div class="label-container">
+            <label for="hospital">Estabelecimento</label>
+            <small class="form-text text-muted">Hospital ou clínica em que ocorreu o procedimento</small>
+        </div>
+        <input id="hospital" autocomplete="off" class="form-control" name="hospital" type="text">
+    </div>
+    <div class="form-group">
+        <div class="label-container">
+            <label class="input-label" for="date">Data</label>
+            <small class="form-text text-muted">Data de realização do procedimento</small>
+        </div>
+        <input id="date" autocomplete="off" autofocus class="form-control" name="date" type="date">
+    </div>
+    <div class="form-group">
+        <div class="label-container">
+            <label class="input-label" for="procedure-type">Tipo do procedimento</label>
+            <small class="form-text text-muted">Cirurgia ou consulta</small>
+        </div>
+        <input id="procedure-type" autocomplete="off" readonly class="form-control" name="procedure-type" type="text"
+            value="Consulta">
+    </div>
+    <div class="button-container">
+        <button id="request" class="btn btn-primary" type="button"
+            onclick="getProcedure(document.getElementById('get-procedure'));">SEND</button>
+    </div>
+</form>

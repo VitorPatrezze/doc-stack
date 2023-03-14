@@ -40,6 +40,14 @@
         </div>
         <input id="birth" autocomplete="off" autofocus class="form-control" name="birth" type="number">
     </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="segment" id="segment1" value="clinic">
+        <label class="form-check-label" for="segment1">Clínica</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="segment" id="segment2" value="surgery">
+        <label class="form-check-label" for="segment2">Cirurgia</label>
+    </div>
     <div class="button-container">
         <button id="request" class="btn btn-primary button-send" type="button"
             onclick="handleRequestClick(document.getElementById('doctor'))">SEND</button>

@@ -1,6 +1,7 @@
 function handleRequestClick(form) {
   var dict = {};
   const l = form.length;
+  console.log(form)
   for (let i = 0; i < l; i++) {
     if (form.elements[i].type === "checkbox") {
       if (form.elements[i].checked) {
@@ -8,12 +9,13 @@ function handleRequestClick(form) {
         dict[form.elements[i].parentNode.id] += (form.elements[i].value)
       }
     } else {
-      if (form.elements[i].name == "") {
-        
-      } else if (isNaN(form.elements[i].value)) {
-        dict[form.elements[i].name] = form.elements[i].value //if it's not a number, just put the value
+      let name = form.elements[i].name
+      if (name == "") {
+
+      } else if (isNaN(form.elements[name].value)) {
+        dict[name] = form.elements[name].value //if it's not a number, just put the value
       } else {
-        dict[form.elements[i].name] = (form.elements[i].value * 1) //if it's a number, parse as number 
+        dict[name] = (form.elements[name].value * 1) //if it's a number, parse as number 
       }
     }
   }
