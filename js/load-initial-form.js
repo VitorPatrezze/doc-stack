@@ -15,15 +15,17 @@ async function loadInitialForm() {
     .then(response => {
       let body = JSON.parse(response["body"])
       if (body["code"] == 403) {
-        $("#form-container").load("templates/not-a-doctor.html");  
+        $("#query-container").load("templates/not-a-doctor.html");  
       } else {
         profile = body["profile"][0]
         console.log(profile)
-        if (profile['segment'] == "clinic") {
-          $("#form-container").load("templates/initial-appointment-form.html");
-        } else {
-          $("#form-container").load("templates/initial-surgery-form.html");
-        }
+        $("#query-container").load("templates/procedure-forms/initial-procedure-form.html", (function() {
+          segment = profile['segment']
+          sessionStorage.setItem("segment", segment);
+          var placeholder = ((segment == "clinic") ? "Consulta" : "Cirurgia");
+          document.querySelector("input[id='segment-placeholder']").value = placeholder;
+          document.querySelector("input[id='segment']").value = segment;
+        }))
       }
     })
 }

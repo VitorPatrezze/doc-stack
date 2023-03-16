@@ -1,7 +1,6 @@
 function handleRequestClick(form) {
   var dict = {};
   const l = form.length;
-  console.log(form)
   for (let i = 0; i < l; i++) {
     if (form.elements[i].type === "checkbox") {
       if (form.elements[i].checked) {

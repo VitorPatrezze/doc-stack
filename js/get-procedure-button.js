@@ -8,19 +8,20 @@ function getProcedure(form) {
         dict[form.elements[i].parentNode.id] += (form.elements[i].value)
       }
     } else {
-      if (form.elements[i].name == "") {
-        
-      } else if (isNaN(form.elements[i].value)) {
-        dict[form.elements[i].name] = form.elements[i].value //if it's not a number, just put the value
+      let name = form.elements[i].name
+      if (name == "") {
+
+      } else if (isNaN(form.elements[name].value)) {
+        dict[name] = form.elements[name].value //if it's not a number, just put the value
       } else {
-        dict[form.elements[i].name] = (form.elements[i].value * 1) //if it's a number, parse as number 
+        dict[name] = (form.elements[name].value * 1) //if it's a number, parse as number 
       }
     }
   }
-  postData(form.id, dict)
+  retrieveProcedure(form.id, dict)
 }
 
-async function postData(uri, dict) {
+async function retrieveProcedure(uri, dict) {
   const accessToken = sessionStorage.getItem("access_token");
 
   await fetch('https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/' + uri, {
@@ -32,23 +33,21 @@ async function postData(uri, dict) {
     body: JSON.stringify(dict)
   })
     .then(response => response.json())
-    .then((data) => {
-        const body = JSON.parse(data["body"])
-        const rows = body["result"]
-        tableBody = document.getElementById("table-main")
-        for (var i = 0; i < rows.length; i++) {
-            var row = tableBody.insertRow(-1);
-
-            var cell1 = row.insertCell(0);
-            var cell2 = row.insertCell(1);
-            var cell3 = row.insertCell(2);
-            var cell4 = row.insertCell(3);
-
-            cell1.innerHTML = i;
-            cell2.innerHTML = rows[i]["initials"];
-            cell3.innerHTML = rows[i]["hospital"];
-            cell4.innerHTML = rows[i]["ocurred_at"];
-        }
+    .then(response => {
+      const body = JSON.parse(response["body"])
+      console.log(body)
+      let code = body['code']
+      if (code == 0) {
+        $("#form-container").load("templates/procedure-forms/create-procedure-form.html", (function() {
+          document.getElementById("new-procedure-initials").value = dict['initials']
+          document.getElementById("new-procedure-hospital").value = dict['hospital']
+          document.getElementById("new-procedure-date").value = dict['date']
+        }));
+      } else if (code == 1) {
+        // SHOW FORM AND CREATE PROCEDURE
+      } else if (code == 2) {
+        // SHOW TABLE WITH FOUND PROCEDURES
+      }
     })
 }
 

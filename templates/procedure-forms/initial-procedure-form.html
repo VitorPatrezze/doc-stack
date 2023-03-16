@@ -23,14 +23,14 @@
     </div>
     <div class="form-group">
         <div class="label-container">
-            <label class="input-label" for="procedure-type">Tipo do procedimento</label>
+            <label class="input-label" for="segment">Tipo do procedimento</label>
             <small class="form-text text-muted">Cirurgia ou consulta</small>
         </div>
-        <input id="procedure-type" autocomplete="off" readonly class="form-control" name="procedure-type" type="text"
-            value="Cirurgia">
+        <input id="segment-placeholder" class="form-control" type="text" value="" disabled>
+        <input id="segment" class="form-control" name="segment" type="text" value="" hidden>
     </div>
     <div class="button-container">
         <button id="request" class="btn btn-primary" type="button"
-            onclick="getProcedure(document.getElementById('get-procedure'));">SEND</button>
+            onclick="getProcedure(document.getElementById('get-procedure'));">Procurar Procedimento</button>
     </div>
 </form>
