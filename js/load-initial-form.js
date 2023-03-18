@@ -17,8 +17,7 @@ async function loadInitialForm() {
       if (body["code"] == 403) {
         $("#query-container").load("templates/not-a-doctor.html");  
       } else {
-        profile = body["profile"][0]
-        console.log(profile)
+        profile = body["profile"]
         $("#query-container").load("templates/procedure-forms/initial-procedure-form.html", (function() {
           segment = profile['segment']
           sessionStorage.setItem("segment", segment);

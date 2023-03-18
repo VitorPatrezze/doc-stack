@@ -17,7 +17,7 @@ async function getProfile() {
       if (body["code"] == 403) {
         $("#profile-div").load("templates/register-doctor-form.html");  
       } else {
-        profile = body["profile"][0]
+        profile = body["profile"]
         console.log(profile)
         $("#profile-div").load("templates/profile-info.html", (function() {
           document.getElementById("profile-name").innerHTML = profile["name"]
