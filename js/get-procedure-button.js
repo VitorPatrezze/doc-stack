@@ -40,11 +40,10 @@ async function retrieveProcedure(uri, dict) {
       if (code == 0) {
         loadCreateProcedureBlock(dict)
       } else if (code == 1) {
-        procedures = body['result']
         // SHOW FOUND PROCEDURES SHOW OPTION TO CREATE NEW
+        procedures = body['result']
         loadProcedures(procedures)
         loadCreateProcedureBlock(dict)
-
       }
     })
 }
@@ -68,20 +67,32 @@ function loadCreateProcedureBlock(dict) {
 }
 
 function loadProcedures(procedures) {
-  promises = []
-  $("#form-container").load("templates/procedure-forms/multiple-procedures.html", (function() {
-    procedures.forEach(async function(element, index) {
-      classId = "procedure-" + index
-      document.getElementById("found-procedures-container").innerHTML += '<form id="' + classId + '" class="procedure-row ' + classId + '"></form>'
-      // ESSA ESTÁ RODANDO APENAS 1 VEZ
-      $("#"+classId).load("templates/procedure-forms/multiple-procedures-row.html")
-    });
-  }))
+  document.getElementById("procedures-container").style.display = "block";
+  tableBody = document.getElementById("procedures-table")
+  for (var i = 0; i < procedures.length; i++) {
+      var row = tableBody.insertRow(-1);
+
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+      
+      cell1.innerHTML = procedures[i]["initials"];
+      cell2.innerHTML = procedures[i]["hospital"];
+      cell3.innerHTML = procedures[i]["ocurred_at"];
+      cell4.innerHTML = procedures[i]["detail"];
+
+      let btn = document.createElement("button")
+      btn.innerHTML = "Selecionar"
+      btn.type = "button"
+      btn.value = procedures[i]["id"]
+      btn.className = "btn btn-primary"
+      btn.addEventListener("click", () => selectProcedure(btn.value))
+      cell5.appendChild(btn)
+  }
 }
 
-function fillProcedureInfo(procedure, classId) {
-  document.querySelector("form.procedure-row." + classId + " input[name='initials']").value = procedure['initials']
-  document.querySelector("form.procedure-row." + classId + " input[name='hospital']").value = procedure['hospital']
-  document.querySelector("form.procedure-row." + classId + " input[name='ocurred_at']").value = procedure['ocurred_at']
-  document.querySelector("form.procedure-row." + classId + " input[name='detail']").value = procedure['detail']
+function selectProcedure(procedureId) {
+  console.log(procedureId)
 }
