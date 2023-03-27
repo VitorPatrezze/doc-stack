@@ -98,6 +98,8 @@ tbody tr:nth-of-type(odd) {
 .content-block {
     font: 'Montserrat', sans-serif;
     width: 70%;
+    max-width: 50rem;
+    min-width: 20rem;
     margin: auto;
     margin-bottom: 3rem;
     background-color: whitesmoke;

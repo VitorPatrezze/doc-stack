@@ -40,7 +40,6 @@ async function retrieveProcedure(uri, dict) {
       if (code == 0) {
         loadCreateProcedureBlock(dict)
       } else if (code == 1) {
-        // SHOW FOUND PROCEDURES SHOW OPTION TO CREATE NEW
         procedures = body['result']
         loadProcedures(procedures)
         loadCreateProcedureBlock(dict)
@@ -94,5 +93,5 @@ function loadProcedures(procedures) {
 }
 
 function selectProcedure(procedureId) {
-  console.log(procedureId)
+  window.location.href = "/form.html" + "?procedure_id=" + procedureId
 }

@@ -19,8 +19,8 @@ async function loadInitialForm() {
       } else {
         profile = body["profile"]
         $("#query-container").load("templates/procedure-forms/initial-procedure-form.html", (function() {
-          segment = profile['segment']
-          sessionStorage.setItem("segment", segment);
+          specialty = profile['specialty']
+          sessionStorage.setItem("specialty", specialty);
           var placeholder = ((segment == "clinic") ? "Consulta" : "Cirurgia");
           document.querySelector("input[id='segment-placeholder']").value = placeholder;
           document.querySelector("input[id='segment']").value = segment;
