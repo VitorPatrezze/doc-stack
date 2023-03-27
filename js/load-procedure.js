@@ -3,11 +3,12 @@ $( document ).ready(function() {
   let params = new URLSearchParams(location.search);
   procedureId = params.get("procedure_id");
   specialty = sessionStorage.getItem("specialty");
-  loadForm(procedureId, segment);
+  loadForm(procedureId, specialty);
 });
 
 
-function loadForm(procedureId, segment) {
+function loadForm(procedureId, specialty) {
   // Carregar formulário de acordo com especialidade do médico e com as informações básicas do procedimento
+  console.log(specialty);
   $("#form-container").load("templates/specific-forms/" + specialty + ".html");
 }

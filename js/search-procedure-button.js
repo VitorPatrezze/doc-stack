@@ -1,4 +1,4 @@
-function getProcedure(form) {
+function searchProcedure(form) {
   var dict = {};
   const l = form.length;
   for (let i = 0; i < l; i++) {

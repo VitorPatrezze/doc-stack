@@ -1,6 +1,5 @@
 function createProcedure(form) {
     let dict = createDict(form)
-    console.log(dict)
     const accessToken = sessionStorage.getItem("access_token");
     fetch('https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/create-procedure', {
       method: 'POST',
