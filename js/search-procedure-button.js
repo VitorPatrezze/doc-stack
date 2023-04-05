@@ -69,29 +69,35 @@ function loadProcedures(procedures) {
   document.getElementById("procedures-container").style.display = "block";
   tableBody = document.getElementById("procedures-table")
   for (var i = 0; i < procedures.length; i++) {
-      var row = tableBody.insertRow(-1);
+    var procedureInfo = new Object()
+    procedureInfo.initials = procedures[i]["initials"];
+    procedureInfo.hospital = procedures[i]["hospital"];
+    procedureInfo.ocurred_at = procedures[i]["ocurred_at"];
+    procedureInfo.detail = procedures[i]["detail"];
 
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      var cell3 = row.insertCell(2);
-      var cell4 = row.insertCell(3);
-      var cell5 = row.insertCell(4);
-      
-      cell1.innerHTML = procedures[i]["initials"];
-      cell2.innerHTML = procedures[i]["hospital"];
-      cell3.innerHTML = procedures[i]["ocurred_at"];
-      cell4.innerHTML = procedures[i]["detail"];
+    var row = tableBody.insertRow(-1);
 
-      let btn = document.createElement("button")
-      btn.innerHTML = "Selecionar"
-      btn.type = "button"
-      btn.value = procedures[i]["id"]
-      btn.className = "btn btn-primary"
-      btn.addEventListener("click", () => selectProcedure(btn.value))
-      cell5.appendChild(btn)
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+    
+    cell1.innerHTML = procedureInfo.initials;
+    cell2.innerHTML = procedureInfo.hospital;
+    cell3.innerHTML = procedureInfo.ocurred_at;
+    cell4.innerHTML = procedureInfo.detail;
+
+    let btn = document.createElement("button")
+    btn.innerHTML = "Selecionar"
+    btn.type = "button"
+    btn.value = JSON.stringify(procedureInfo)
+    btn.className = "btn btn-primary"
+    btn.addEventListener("click", () => selectProcedure(btn.value))
+    cell5.appendChild(btn)
   }
 }
 
-function selectProcedure(procedureId) {
-  window.location.href = "/form.html" + "?procedure_id=" + procedureId
+function selectProcedure(procedureInfo) {
+  window.location.href = "/form.html?procedure_info=" + procedureInfo
 }
