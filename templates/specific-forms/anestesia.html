@@ -1,4 +1,5 @@
 <form id="anesthesia-form" class="content-block">
+    <input id="id" autocomplete="off" hidden readonly class="form-control" name="id" type="text">
     <div class="row">
         <div class="col">
             <div class="form-group">
@@ -37,11 +38,11 @@
         <div class="label-container">
             <label for="diagnosis">Período</label>
         </div>
-        <div id="period">
-            <input type="checkbox" value="madrugada"> Madrugada (00:00 às 06:00)<br>
-            <input type="checkbox" value="manha"> Manhã (06:00 às 12:00)<br>
-            <input type="checkbox" value="tarde"> Tarde (12:00 às 18:00)<br>
-            <input type="checkbox" value="noite"> Noite (18:00 às 00:00)<br>
+        <div id="period" class="form-check">
+            <input type="radio" name="period" value="madrugada"> Madrugada (00:00 às 06:00)<br>
+            <input type="radio" name="period" value="manha"> Manhã (06:00 às 12:00)<br>
+            <input type="radio" name="period" value="tarde"> Tarde (12:00 às 18:00)<br>
+            <input type="radio" name="period" value="noite"> Noite (18:00 às 00:00)<br>
         </div>
     </div>
     <div class="form-group">

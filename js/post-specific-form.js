@@ -1,4 +1,4 @@
-function handleRequestClick(form) {
+function postSpecificForm(form) {
     var dict = {};
     const l = form.length;
     for (let i = 0; i < l; i++) {
@@ -18,9 +18,10 @@ function handleRequestClick(form) {
         }
       }
     }
-    postData(form.id, dict).then(
-        window.location.href = "https://main.d3koga650buw25.amplifyapp.com/home"  
-    )
+    console.log(dict)
+    // postData(form.id, dict).then(
+    //     window.location.href = "https://main.d3koga650buw25.amplifyapp.com/home"  
+    // )
   }
   
   async function postData(uri, dict) {

@@ -69,7 +69,9 @@ function loadProcedures(procedures) {
   document.getElementById("procedures-container").style.display = "block";
   tableBody = document.getElementById("procedures-table")
   for (var i = 0; i < procedures.length; i++) {
+    console.log(JSON.stringify(procedures[i]))
     var procedureInfo = new Object()
+    procedureInfo.id = procedures[i]["id"]
     procedureInfo.initials = procedures[i]["initials"];
     procedureInfo.hospital = procedures[i]["hospital"];
     procedureInfo.ocurred_at = procedures[i]["ocurred_at"];
@@ -98,6 +100,12 @@ function loadProcedures(procedures) {
   }
 }
 
-function selectProcedure(procedureInfo) {
-  window.location.href = "/form.html?procedure_info=" + procedureInfo
+function selectProcedure(procedureInfoStr) {
+  let queryParams = "";
+  procedureInfo = JSON.parse(procedureInfoStr)
+  Object.keys(procedureInfo).forEach(function(k){
+    queryParams += k + "=" + procedureInfo[k] + "&"
+  })
+
+  window.location.href = "/form.html?" + queryParams
 }
