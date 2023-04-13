@@ -10,7 +10,14 @@ function createProcedure(form) {
       body: JSON.stringify(dict)
     })
     .then(response => response.json())
-    .then(response => console.log(response))
+    // Carregar pagina do procedimento caso o registro tenha dado certo
+    .then(response => {
+        console.log(response)
+        if (response["statusCode"] == 200) {
+            dict["id"] = JSON.parse(response["body"])["procedure_id"]
+            selectProcedure(dict)
+        }
+    })
 }
 
 function createDict(form) {
@@ -34,4 +41,13 @@ function createDict(form) {
         }
     }
     return dict
+}
+
+function selectProcedure(procedureInfo) {
+    let queryParams = "";
+    Object.keys(procedureInfo).forEach(function(k){
+      queryParams += k + "=" + procedureInfo[k] + "&"
+    })
+  
+    window.location.href = "/form.html?" + queryParams
 }

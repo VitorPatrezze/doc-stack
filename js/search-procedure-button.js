@@ -35,7 +35,6 @@ async function retrieveProcedure(uri, dict) {
     .then(response => response.json())
     .then(response => {
       const body = JSON.parse(response["body"])
-      console.log(body)
       let code = body['code']
       if (code == 0) {
         loadCreateProcedureBlock(dict)
@@ -69,7 +68,6 @@ function loadProcedures(procedures) {
   document.getElementById("procedures-container").style.display = "block";
   tableBody = document.getElementById("procedures-table")
   for (var i = 0; i < procedures.length; i++) {
-    console.log(JSON.stringify(procedures[i]))
     var procedureInfo = new Object()
     procedureInfo.id = procedures[i]["id"]
     procedureInfo.initials = procedures[i]["initials"];
