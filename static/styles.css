@@ -131,8 +131,13 @@ label {
     margin-bottom: 1rem;
 }
 
-.procedures-section {
+.specialty-info {
     border-top: 1px solid;
     border-color: grey;
     padding-top: 1rem;
+}
+
+.pie-chart{
+    width: 50%;
+    margin: auto;
 }

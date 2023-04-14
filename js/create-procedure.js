@@ -15,7 +15,7 @@ function createProcedure(form) {
         console.log(response)
         if (response["statusCode"] == 200) {
             dict["id"] = JSON.parse(response["body"])["procedure_id"]
-            selectProcedure(dict)
+            createLoadProcedure(dict)
         }
     })
 }
@@ -43,7 +43,7 @@ function createDict(form) {
     return dict
 }
 
-function selectProcedure(procedureInfo) {
+function createLoadProcedure(procedureInfo) {
     let queryParams = "";
     Object.keys(procedureInfo).forEach(function(k){
       queryParams += k + "=" + procedureInfo[k] + "&"
