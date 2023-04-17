@@ -47,9 +47,19 @@
     </div>
     <div class="form-group">
         <div class="label-container">
-            <label for="diagnosis">Diagnóstico</label>
+            <label for="size">Porte Cirúrgico</label>
         </div>
-        <input id="diagnosis" autocomplete="off" autofocus class="form-control" name="diagnosis" type="text">
+        <div id="size" class="form-check">
+            <input type="radio" name="size" value="pequeno"> Pequeno<br>
+            <input type="radio" name="size" value="medio"> Médio<br>
+            <input type="radio" name="size" value="grande"> Grande<br>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="label-container">
+            <label for="surgery">Cirurgia Realizada</label>
+        </div>
+        <input id="surgery" autocomplete="off" autofocus class="form-control" name="surgery" type="text">
     </div>
     <div class="form-group">
         <div class="label-container">
@@ -66,7 +76,9 @@
             <input type="checkbox" value="geral"> Anestesia Geral<br>
             <input type="checkbox" value="peridural"> Peridural<br>
             <input type="checkbox" value="sedação"> Sedação<br>
-            <input type="checkbox" value="outra"> outro<br>
+            <input type="checkbox" value="raquianestesia"> Raquianestesia<br>
+            <input type="checkbox" value="bloqueio_periférico"> Bloqueio Periférico<br>
+            <input type="checkbox" value="outra"> Outro<br>
         </div>
     </div>
     <div class="form-group">
@@ -76,24 +88,6 @@
         </div>
         <input id="duration" autocomplete="off" autofocus class="form-control" name="duration" type="number"
             step="1"><br>
-    </div>
-    <div class="form-group">
-        <div class="label-container">
-            <label for="blockade_info">Informações do Bloqueio</label>
-            <small class="form-text text-muted">Nível, posicionamento do cateter, fármacos utilizados, repiques
-                e horários</small>
-        </div>
-        <input id="blockade_info" autocomplete="off" autofocus class="form-control" name="blockade_info"
-            type="text"><br>
-    </div>
-    <div class="form-group">
-        <div class="label-container">
-            <label for="intraoperative">Dados intra-operatórios</label>
-            <small class="form-text text-muted">Volume de cristalóides, diurese, sangramento, transfusões
-                realizadas</small>
-        </div>
-        <input id="intraoperative" autocomplete="off" autofocus class="form-control" name="intraoperative"
-            type="text"><br>
     </div>
     <div class="form-group">
         <div class="label-container">
