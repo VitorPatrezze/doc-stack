@@ -116,6 +116,7 @@ label {
     display: flex;
     justify-content: space-between;
     align-items: end;
+    font-weight: bold;
 }
 
 .profile-info label {
