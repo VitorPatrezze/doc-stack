@@ -98,7 +98,7 @@ tbody tr:nth-of-type(odd) {
 .content-block {
     font: 'Montserrat', sans-serif;
     width: 70%;
-    max-width: 50rem;
+    max-width: 70rem;
     min-width: 20rem;
     margin: auto;
     margin-bottom: 3rem;
@@ -134,15 +134,18 @@ label {
 
 .specialty-info {
     border-top: 1px solid;
-    border-color: grey;
+    border-color: #bbb;
     padding-top: 1rem;
 }
 
-.pie-chart{
-    width: 50%;
-    margin: auto;
+.charts-container {
+    
+    justify-content: center;
 }
 
-.chart-row {
+.chart {
     margin-top: 1rem;
+    margin-bottom: 2rem;
+
+    max-width: 33%;
 }
