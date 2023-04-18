@@ -35,11 +35,69 @@ Chart.controllers.RoundedDoughnut = Chart.controllers.doughnut.extend({
     }
 });
 
+/* charts: {
+    chart1: {
+        "title": "Anestesias Realizadas",
+        "data": {
+            "raqui": 100,
+            "geral": 300,
+            "sedação": 500
+        }
+    },
+    chart2: {
+        "title": "Porte Cirurgico",
+        "data": {
+            "Grande": 300,
+            "Médio": 100,
+            "Pequeno": 50
+        }   
+    }
+}
+*/
 
-function loadChart() {
-    var ctx1 = document.getElementById("pieChart1");
-    var dict = {"Geral": 300, "Raquianestesia": 100, "Bloqueio Periférico": 200, "Sedação": 50}
-    new Chart(ctx1, {
+function createCharts(profile) {
+    var charts = [
+        {
+            "id": "teste1",
+            "title": "Anestesias Realizadas",
+            "data": {
+                "raqui": 100,
+                "geral": 300,
+                "sedação": 500
+            }
+        },
+        {
+            "id": "teste2",
+            "title": "Porte Cirurgico",
+            "data": {
+                "Grande": 300,
+                "Médio": 100,
+                "Pequeno": 50
+            }   
+        }
+    ]
+    charts.forEach(function(chart){
+        newChart(chart)
+    });
+}
+
+
+function newChart(chart) {
+    console.log(chart)
+    chartId = chart["id"]
+
+    //Add graph element
+    const tempDiv = document.createElement("div");
+    tempDiv.className = "row";
+    tempDiv.className = "chart-row";
+    const tempCanvas = document.createElement("canvas");
+    tempCanvas.id = chartId
+    tempDiv.insertAdjacentElement("beforeend", tempCanvas)
+    
+    document.getElementById("charts-col").insertAdjacentElement("beforeend", tempDiv)
+
+    ctx = document.getElementById(chartId)
+    var chart = new Chart(ctx, {
         type: 'pie',
         options: {
             legend: {
@@ -54,22 +112,22 @@ function loadChart() {
     
         },
         data: {
-            labels: Object.keys(dict),
+            labels: Object.keys(chart["data"]),
             datasets: [
                 {
-                    data: Object.values(dict),
+                    data: Object.values(chart["data"]),
                     borderWidth: 0,
                     backgroundColor: [
                         '#a5c8e6',
                         '#7eb0db',
                         '#658daf',
-                        "#324658"
+                        '#324658'
                     ],
                     hoverBackgroundColor: [
                         '#a5c8e6',
                         '#7eb0db',
                         '#658daf',
-                        "#324658"
+                        '#324658'
                     ]
                 }]
             }

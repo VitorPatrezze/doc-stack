@@ -142,3 +142,7 @@ label {
     width: 50%;
     margin: auto;
 }
+
+.chart-row {
+    margin-top: 1rem;
+}

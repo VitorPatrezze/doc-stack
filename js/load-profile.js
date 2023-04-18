@@ -37,5 +37,7 @@ function basicInfo(profile) {
 
 //FALTA FAZER O PREENCHIMENTO DAS INFORMACOES ESPECIFICAS DA ESPECIALIDADE
 function fillSpecialtyInfo(profile) {
-  loadChart()
+  // buscar todos os elementos dentro do html que terão gráficos e chamar o "newChart" para criar os graficos dentrod e cada um deles
+
+  createCharts(profile)
 }

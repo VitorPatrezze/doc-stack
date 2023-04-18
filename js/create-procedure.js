@@ -25,10 +25,10 @@ function createDict(form) {
     const l = form.length;
     for (let i = 0; i < l; i++) {
         if (form.elements[i].type === "checkbox") {
-        if (form.elements[i].checked) {
-            dict = createArray(dict, form.elements[i]);
-            dict[form.elements[i].parentNode.id] += (form.elements[i].value)
-        }
+            if (form.elements[i].checked) {
+                dict = createArray(dict, form.elements[i]);
+                dict[form.elements[i].parentNode.id] += (form.elements[i].value)
+            }
         } else {
             let name = form.elements[i].name
             if (name == "") {
