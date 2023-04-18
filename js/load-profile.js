@@ -37,4 +37,5 @@ function basicInfo(profile) {
 
 //FALTA FAZER O PREENCHIMENTO DAS INFORMACOES ESPECIFICAS DA ESPECIALIDADE
 function fillSpecialtyInfo(profile) {
+  loadChart()
 }
