@@ -97,6 +97,7 @@ tbody tr:nth-of-type(odd) {
 
 .content-block {
     font: 'Montserrat', sans-serif;
+    font-size: 12px;
     width: 70%;
     max-width: 70rem;
     min-width: 20rem;
@@ -138,14 +139,16 @@ label {
     padding-top: 1rem;
 }
 
-.charts-container {
-    
+.pie-charts-container{
+    justify-content: center;
+}
+
+.ratings-container {
     justify-content: center;
 }
 
 .chart {
     margin-top: 1rem;
     margin-bottom: 2rem;
-
-    max-width: 33%;
+    min-width: 200px;
 }
