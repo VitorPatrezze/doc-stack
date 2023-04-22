@@ -120,35 +120,3 @@ label {
     font-weight: bold;
 }
 
-.profile-info label {
-    align-content: center;
-    margin: auto;
-    font-size: 1rem;
-}
-
-
-.profile-info-value {
-    font-weight: bold;
-    width: auto ;
-    margin-bottom: 1rem;
-}
-
-.specialty-info {
-    border-top: 1px solid;
-    border-color: #bbb;
-    padding-top: 1rem;
-}
-
-.pie-charts-container{
-    justify-content: center;
-}
-
-.ratings-container {
-    justify-content: center;
-}
-
-.chart {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    min-width: 200px;
-}

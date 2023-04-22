@@ -1,0 +1,32 @@
+#profile-name {
+    font-weight: bold;
+    font-size: xx-large;
+    margin-bottom: 1rem;
+}
+
+.profile-basic-info label {
+    align-content: center;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.profile-info-value {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: auto;
+    border-bottom: solid 1px #bbb;
+}
+
+.text-values-container {
+    margin: auto;
+}
+
+.chart {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    min-width: 200px;
+}
+
+.radar {
+    min-height: 100px;
+}

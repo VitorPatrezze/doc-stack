@@ -158,11 +158,14 @@ function radarChart(chart) {
             labels: Object.keys(chart["data"]),
             datasets: [
                 {
-                    label: "Notas",
                     data: Object.values(chart["data"]),
                     fill: true,
                     backgroundColor: 'rgba(126, 176, 219, 0.3)',
+                    borderWidth: 1,
+                    pointBorderWidth: 1,
+                    pointHitRadius: 1
                 }]
             }
         });
+    chart.options.legend.display = false;
 }

@@ -27,7 +27,6 @@ async function getProfile() {
 function basicInfo(profile) {
   document.getElementById("profile-name").innerHTML = profile["name"]
   document.getElementById("profile-specialty").innerHTML = profile["specialty"]
-  document.getElementById("profile-segment").innerHTML = profile["segment"]
   document.getElementById("profile-crm").innerHTML = profile["crm"]
   document.getElementById("profile-state").innerHTML = profile["state"]
   document.getElementById("profile-birth").innerHTML = profile["birth"]
