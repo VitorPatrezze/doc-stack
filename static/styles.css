@@ -96,7 +96,7 @@ tbody tr:nth-of-type(odd) {
 }
 
 .content-block {
-    font: 'Montserrat', sans-serif;
+    font: 'Montserrat';
     font-size: 12px;
     width: 70%;
     max-width: 70rem;
@@ -110,7 +110,6 @@ tbody tr:nth-of-type(odd) {
 
 label {
     margin-right: 1rem;
-    align-items: end;
 }
 
 .label-container {
@@ -119,4 +118,3 @@ label {
     align-items: end;
     font-weight: bold;
 }
-

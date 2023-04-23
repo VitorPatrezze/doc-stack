@@ -4,8 +4,11 @@
     margin-bottom: 1rem;
 }
 
+.specialty-info {
+    margin-top: 2rem;
+}
+
 .profile-basic-info label {
-    align-content: center;
     margin: auto;
     margin-bottom: 1rem;
 }
@@ -28,5 +31,11 @@
 }
 
 .radar {
-    min-height: 100px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    min-width: 200px;
+}
+
+.crm-div {
+    min-width: 33%;
 }

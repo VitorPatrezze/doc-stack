@@ -134,7 +134,7 @@ function radarChart(chart) {
 
     //Add graph element
     const tempDiv = document.createElement("div");
-    tempDiv.className = "chart col";
+    tempDiv.className = "col radar";
     const tempCanvas = document.createElement("canvas");
     tempCanvas.id = chartId
     tempDiv.insertAdjacentElement("beforeend", tempCanvas)
