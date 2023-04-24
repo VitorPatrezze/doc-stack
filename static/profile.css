@@ -1,11 +1,6 @@
-#profile-name {
+.profile-section {
     font-weight: bold;
     font-size: xx-large;
-    margin-bottom: 1rem;
-}
-
-.specialty-info {
-    margin-top: 2rem;
 }
 
 .profile-basic-info label {
