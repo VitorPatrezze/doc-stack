@@ -19,15 +19,14 @@ function postSpecificForm(form) {
       }
     }
     console.log(dict)
-    // postData(form.id, dict).then(
-    //     window.location.href = "https://main.d3koga650buw25.amplifyapp.com/home"  
-    // )
+    postFormData(dict)
   }
   
-  async function postData(uri, dict) {
+  async function postFormData(dict) {
     const accessToken = sessionStorage.getItem("access_token");
-  
-    await fetch('https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/' + uri, {
+    console.log(dict)
+
+    await fetch('https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/form', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -36,6 +35,9 @@ function postSpecificForm(form) {
       body: JSON.stringify(dict)
     })
       .then(response => response.json())
+      .then(response => {
+        console.log(response)
+      })
   }
   
   function createArray(dict, element) {

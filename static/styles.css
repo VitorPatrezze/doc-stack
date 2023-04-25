@@ -95,9 +95,13 @@ tbody tr:nth-of-type(odd) {
     background-color: rgb(179, 208, 255, 0.3)
 }
 
+h1 {
+    margin-bottom: 1rem;
+}
+
 .content-block {
     font: 'Montserrat';
-    font-size: 12px;
+    font-size: 14px;
     width: 70%;
     max-width: 70rem;
     min-width: 20rem;

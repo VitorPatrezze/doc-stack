@@ -35,3 +35,6 @@ O formulário do paciente terá as seguintes perguntas (formato de notas):
 2. Satisfação com o consultório
 3. Cordialidade do médico
 4. "Todas as suas perguntas foram respondidas de acordo?"
+
+
+Preencher o formulário específico -> Confere se ja existe algum registro do formulário específico feito
