@@ -6,6 +6,7 @@
 .profile-basic-info label {
     margin: auto;
     margin-bottom: 1rem;
+    color: #888;
 }
 
 .profile-info-value {
