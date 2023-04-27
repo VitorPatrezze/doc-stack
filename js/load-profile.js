@@ -89,7 +89,7 @@ function basicInfo(profile) {
 
 //FALTA FAZER O PREENCHIMENTO DAS INFORMACOES ESPECIFICAS DA ESPECIALIDADE
 function fillSpecialtyInfo(profile) {
-  //document.getElementById("procedures-performed").innerHTML = profile["procedures-performed"]
-  //document.getElementById("evaluated-procedures").innerHTML = profile["evaluated-procedures"]
+  document.getElementById("procedures-performed").innerHTML = profile["procedures-performed"]
+  document.getElementById("evaluated-procedures").innerHTML = profile["evaluated-procedures"]
   createCharts(profile)
 }
