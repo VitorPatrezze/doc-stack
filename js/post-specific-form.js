@@ -18,13 +18,11 @@ function postSpecificForm(form) {
         }
       }
     }
-    console.log(dict)
     postFormData(dict)
   }
   
   async function postFormData(dict) {
     const accessToken = sessionStorage.getItem("access_token");
-    console.log(dict)
 
     await fetch('https://tmaqjddwt8.execute-api.us-east-1.amazonaws.com/dev/form', {
       method: 'POST',
@@ -33,11 +31,12 @@ function postSpecificForm(form) {
         'Auth': accessToken
       },
       body: JSON.stringify(dict)
-    })
-      .then(response => response.json())
+    }).then(response => (response.json())
       .then(response => {
         console.log(response)
+        window.location.href = "/procedure.html"
       })
+    )
   }
   
   function createArray(dict, element) {

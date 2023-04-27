@@ -1,5 +1,3 @@
-
-
 const chartThemes = {
     "red": [
         '#feadad',
@@ -22,54 +20,57 @@ const chartThemes = {
 } 
 
 function createCharts(profile) {
-    var charts = [
-        {
-            "id": "teste1",
-            "type": "pie",
-            "title": "Anestesias Realizadas",
-            "data": {
-                "raqui": 100,
-                "geral": 300,
-                "sedação": 500
-            },
-            "theme" : "blue"
-        },
-        {
-            "id": "teste2",
-            "type": "pie",
-            "title": "Porte Cirurgico",
-            "data": {
-                "Grande": 300,
-                "Médio": 100,
-                "Pequeno": 50
-            },
-            "theme" : "red"   
-        },
-        {
-            "id": "teste3",
-            "type": "pie",
-            "title": "Cirurgia Realizada",
-            "data": {
-                "Cardiovascular": 300,
-                "homeoplastia": 100,
-                "neurocirurgia": 50,
-                "outras": 50
-            },
-            "theme" : "green"   
-        },
-        {
-            "id": "teste4",
-            "type": "radar",
-            "data": {
-                "Cordialidade": 4.5,
-                "Pré-Operatório": 3.5,
-                "Pós-Operatório": 4,
-                "Satisfação do paciente": 2.5,
-                "Nota entre médicos": 3
-            },
-            "theme" : "green"   
-        },
-    ]
+    // var charts = [
+    //     {
+    //         "id": "teste1",
+    //         "type": "pie",
+    //         "title": "Anestesias Realizadas",
+    //         "data": {
+    //             "raqui": 100,
+    //             "geral": 300,
+    //             "sedação": 500
+    //         },
+    //         "theme" : "blue"
+    //     },
+    //     {
+    //         "id": "teste2",
+    //         "type": "pie",
+    //         "title": "Porte Cirurgico",
+    //         "data": {
+    //             "Grande": 300,
+    //             "Médio": 100,
+    //             "Pequeno": 50
+    //         },
+    //         "theme" : "red"   
+    //     },
+    //     {
+    //         "id": "teste3",
+    //         "type": "pie",
+    //         "title": "Cirurgia Realizada",
+    //         "data": {
+    //             "Cardiovascular": 300,
+    //             "homeoplastia": 100,
+    //             "neurocirurgia": 50,
+    //             "outras": 50
+    //         },
+    //         "theme" : "green"   
+    //     },
+    //     {
+    //         "id": "teste4",
+    //         "type": "radar",
+    //         "data": {
+    //             "Cordialidade": 4.5,
+    //             "Pré-Operatório": 3.5,
+    //             "Pós-Operatório": 4,
+    //             "Satisfação do paciente": 2.5,
+    //             "Nota entre médicos": 3
+    //         },
+    //         "theme" : "green"   
+    //     },
+    // ]
+    charts = JSON.parse(profile["charts"])
+
+
     charts.forEach(function(chart){
         switch (chart["type"]) {
             case "pie":

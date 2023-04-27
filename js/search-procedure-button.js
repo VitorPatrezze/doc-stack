@@ -66,7 +66,8 @@ function loadCreateProcedureBlock(dict) {
 
 function loadProcedures(procedures) {
   document.getElementById("procedures-container").style.display = "block";
-  tableBody = document.getElementById("procedures-table")
+  tableBody = document.getElementById("table-body")
+  tableBody.innerHTML=""
   for (var i = 0; i < procedures.length; i++) {
     var procedureInfo = new Object()
     procedureInfo.id = procedures[i]["id"]

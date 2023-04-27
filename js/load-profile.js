@@ -13,12 +13,12 @@ async function getProfile() {
   })
   .then(response => response.json())
   .then(response => {
+    console.log(response )
     let body = JSON.parse(response["body"])
     if (body["code"] == 403) {
       $("#profile-div").load("templates/register-doctor-form.html");  
     } else {
       profile = body["profile"]
-      console.log(profile)
       $("#profile-div").load("templates/profile/profile-info.html", () => basicInfo(profile))
     }
   })
@@ -60,6 +60,8 @@ function basicInfo(profile) {
   //   tempDiv.insertAdjacentElement("beforeend", tempState)
   //   crmdiv.insertAdjacentElement("beforeEnd", tempDiv)
   // });
+  console.log(profile)
+
 
   // ARRUMAR ISSO
   crmdiv = document.getElementById("crm-container")
@@ -87,7 +89,7 @@ function basicInfo(profile) {
 
 //FALTA FAZER O PREENCHIMENTO DAS INFORMACOES ESPECIFICAS DA ESPECIALIDADE
 function fillSpecialtyInfo(profile) {
-  // buscar todos os elementos dentro do html que terão gráficos e chamar o "newChart" para criar os graficos dentrod e cada um deles
-
+  //document.getElementById("procedures-performed").innerHTML = profile["procedures-performed"]
+  //document.getElementById("evaluated-procedures").innerHTML = profile["evaluated-procedures"]
   createCharts(profile)
 }
