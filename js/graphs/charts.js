@@ -55,21 +55,21 @@ function createCharts(profile) {
     //         },
     //         "theme" : "green"   
     //     },
-    //     {
-    //         "id": "teste4",
-    //         "type": "radar",
-    //         "data": {
-    //             "Cordialidade": 4.5,
-    //             "Pré-Operatório": 3.5,
-    //             "Pós-Operatório": 4,
-    //             "Satisfação do paciente": 2.5,
-    //             "Nota entre médicos": 3
-    //         },
-    //         "theme" : "green"   
-    //     },
+    //     
     // ]
     charts = JSON.parse(profile["charts"])
-
+    charts[3] = {
+                "id": "teste4",
+                "type": "radar",
+                "data": {
+                    "Cordialidade": 4.5,
+                    "Pré-Operatório": 3.5,
+                    "Pós-Operatório": 4,
+                    "Satisfação do paciente": 2.5,
+                    "Nota entre médicos": 3
+                },
+                "theme" : "green"   
+            }
 
     charts.forEach(function(chart){
         switch (chart["type"]) {
@@ -151,7 +151,8 @@ function radarChart(chart) {
                     beginAtZero: true,
                     max: 5,
                     min: 0,
-                    stepSize: 1
+                    stepSize: 2.5,
+                    display: false
                 }
             }
         },
